@@ -58,3 +58,7 @@ body, a:link, a:visited, a:active{
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
+.highlight {
+  color: red;
+}

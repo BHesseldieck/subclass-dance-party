@@ -28,14 +28,15 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('.dancers').append(dancer.$node);
+    if (!$(dancer.$node).hasClass('superHeroDancer')) {
+      $(dancer.$node).addClass('draggable');
+    }
     dancers.push(dancer);
   });
 
-  $('body').on('click', 'span', function() {
-    $(this).remove(); 
-  });
 
-  $('button').on('click', function(event) {
+
+  $('.lineUp').on('click', function(event) {
     var horizontalPos = 0;
 
     dancers.forEach(dancer => {
@@ -47,6 +48,32 @@ $(document).ready(function() {
 
     });
   });
+
+  $('.dancers span').addClass('draggable');
+
+  $('.remove').on('click', function() {
+    $('.dancers span').toggleClass('removeDancers');
+    $('.remove').toggleClass('highlight');
+    $('.dancers span').toggleClass('draggable');
+  });
+
+
+  $('.dancers').on('click', 'span', function(event) {
+    if ($(this).hasClass('removeDancers')) {
+      $(this).remove();
+    } else if ($(this).hasClass('draggable')) {
+      $(this).draggable();
+    }
+  });
+
+
+  // $('.dancers').on('mouse-down', 'span', function() {
+  //   console.log('hello');
+  //   $(this).draggable();
+  // });
+
+  console.log(dancers);
+
 
 });
 

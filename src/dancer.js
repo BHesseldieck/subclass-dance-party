@@ -1,4 +1,5 @@
 // Creates and returns a new dancer object that can step
+
 var makeDancer = function(top, left, timeBetweenSteps) {
 
   this.$node = $('<span class="dancer"></span>');
@@ -33,6 +34,8 @@ makeDancer.prototype.lineUp = function(top, left) {
 };
 
 var rotateInterval;
+
+
 makeDancer.prototype.rotate = function() {
   rotateInterval = setInterval(function(){
   var rotated = 0;
@@ -44,3 +47,4 @@ makeDancer.prototype.rotate = function() {
     this.$node.css(styleSettings);
   }, 20)
 };
+
