@@ -3,8 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
+  background-image: url("https://goo.gl/s7nxVw");
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -24,4 +24,26 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.superHeroDancer img{
+  height: 75px;
+}
+
+.superHeroDancer{  
+  position: absolute;
+}
+
+.drakeDancer {
+  position: absolute;
+}
+
+.drakeDancer img {
+  height: 300px;
+}
+
+.catDJ {
+  top: 300px;
+  left: 730px;
+  position: fixed;
 }
