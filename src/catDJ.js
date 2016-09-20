@@ -2,7 +2,7 @@ var makeCatDJ = function(top, left, timeBetween) {
   makeDancer.call(this);
   // this.top = $(window).height() / 2;
   // this.left = $(window).width() / 2;
-  this.$node = $('<span class="catDJ"><img src = "http://i.giphy.com/w5eFyOHmkS8uc.gif" ></span>');
+  this.$node = $('<span class="catDJ"><img src = "./src/kitty.gif" ></span>');
   // this.setPosition(this.top, this.left);
 };
 

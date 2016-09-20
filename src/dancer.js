@@ -22,3 +22,25 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.lineUp = function(top, left) {
+  var styleSettings = {
+    top: top,
+    left: left,
+    display: "inline"
+  };
+  this.$node.css(styleSettings);
+};
+
+var rotateInterval;
+makeDancer.prototype.rotate = function() {
+  rotateInterval = setInterval(function(){
+  var rotated = 0;
+  
+  var styleSettings = {
+    transform: rotate(rotated)
+  };
+  rotated += 5
+    this.$node.css(styleSettings);
+  }, 20)
+};

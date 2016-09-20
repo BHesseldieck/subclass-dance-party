@@ -1,6 +1,6 @@
 var makeSuperHeroDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="superHeroDancer"><img src = "https://goo.gl/dEXQuE" ></span>');
+  this.$node = $('<span class="superHeroDancer"><img src = "./src/superHero.png" ></span>');
   this.top = top;
   this.left = 0;
   this.timeBetweenSteps = 100;
@@ -26,7 +26,8 @@ makeSuperHeroDancer.prototype.changePosition = function() {
   this.left += 5;
   var styleSettings = {
     top: this.top,
-    left: this.left,
+    left: this.left
   };
   this.$node.css(styleSettings);
 };
+

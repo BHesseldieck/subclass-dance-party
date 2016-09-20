@@ -27,11 +27,25 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+    $('.dancers').append(dancer.$node);
+    dancers.push(dancer);
   });
 
   $('body').on('click', 'span', function() {
     $(this).remove(); 
+  });
+
+  $('button').on('click', function(event) {
+    var horizontalPos = 0;
+
+    dancers.forEach(dancer => {
+      if (dancer.constructor = makeSuperHeroDancer) {
+        dancer.top = 400;
+      }
+      dancer.lineUp(400, horizontalPos);
+      horizontalPos += 75;
+
+    });
   });
 
 });
